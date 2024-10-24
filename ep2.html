@@ -51,31 +51,6 @@
       .nav-item.unactive:hover {
         color: #795548;
       }
-
-      swiper-container {
-        width: 100%;
-        height: 100%;
-      }
-
-      swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #f0cb25;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .opacity-bg-gray {
-        background-color: #2d2d2db0;
-      }
     </style>
   </head>
   <body>
@@ -85,14 +60,16 @@
     >
       <div class="flex items-center">
         <img class="h-10 w-10" src="./images/nav_icon.png" alt="Buddha Mmsub" />
-        <h1>Buddha Mmsub</h1>
+        <h1>Buddha Mmsub Episode 2</h1>
       </div>
-      <div class="fixed bottom-0 w-full p-0 m-0 md:relative md:w-auto">
+      <div
+        class="fixed bottom-0 w-full p-0 m-0 md:relative md:w-auto bg-amber-200 rounded-t-lg"
+      >
         <ul class="flex gap-2 items-center">
           <li class="w-1/2">
-            <a href="./">
+            <a href="./" target="_blank">
               <div
-                class="flex flex-col items-center bg-amber-200 hover:bg-amber-300 transition-all rounded-t-lg cursor-pointer md:bg-transparent md:hover:bg-transparent md: md:hover:font-bold md:hover:text-lg md:font-semibold"
+                class="flex flex-col items-center hover:bg-amber-300 transition-all rounded-t-lg cursor-pointer md:bg-transparent md:hover:bg-transparent md: md:hover:font-bold md:hover:text-lg md:font-semibold"
               >
                 <svg
                   class="w-6 h-6 text-gray-800 md:hidden mt-2"
@@ -146,76 +123,83 @@
         </ul>
       </div>
     </nav>
-    <!-- for slider -->
-    <div class="slide-container h-52 m-2 rounded-lg">
-      <swiper-container
-        class="mySwiper"
-        pagination="true"
-        pagination-clickable="true"
-        navigation="true"
-        space-between="30"
-        centered-slides="true"
-        autoplay-delay="5000"
-        autoplay-disable-on-interaction="false"
-      >
-        <swiper-slide class="rounded-lg"
-          ><img
-            class="rounded-lg"
-            src="https://qqcdnpictest.mxplay.com/pic/091924994f8f4ff15aed5be6017361cb/en/16x9/1600x900/test_pic1688731638299.jpg"
-            alt=""
-        /></swiper-slide>
-        <swiper-slide class="rounded-lg">Slide 2</swiper-slide>
-        <swiper-slide class="rounded-lg">Slide 3</swiper-slide>
-      </swiper-container>
-    </div>
-    <!-- for movies list -->
-    <div class="grid grid-cols-1">
-      <a href="./ep1.html">
-        <div class="flex p-1 transition-all hover:bg-gray-200 md:hover:pb-10">
-          <div class="relative">
-            <img
-              class="h-28 rounded-lg"
-              src="https://i.mycdn.me/getVideoPreview?id=7398306220779&idx=10&type=39&tkn=1cD0Y6jmDjbxyFZikfTUrfXQ03s&fn=vid_u"
-              alt=""
-            /><span
-              class="absolute bottom-0 right-0 text-white opacity-bg-gray m-2 rounded-lg p-1"
-              >46:17</span
+
+    <div class="p-1 transition-all hover:bg-gray-200 md:hover:pb-10">
+      <div class="relative" id="video-thumbnail">
+        <img
+          class="W-full rounded-lg"
+          src="https://i.mycdn.me/getVideoPreview?id=7398306220779&idx=10&type=39&tkn=1cD0Y6jmDjbxyFZikfTUrfXQ03s&fn=vid_u"
+          alt=""
+        /><span
+          class="absolute bottom-0 right-0 text-white opacity-bg-gray m-2 rounded-lg p-1"
+          >43:20</span
+        >
+      </div>
+      <div class="pl-2 flex flex-col">
+        <a class="hover:underline text-zinc-600 text-lg"
+          >Buddha Mmsub Episode 2</a
+        >
+        <a class="hover:underline text-zinc-500 text-base">အပိုင်း ၂</a>
+      </div>
+      <div class="flex items-left mt-2">
+        <a
+          class="bg-amber-200 hover:bg-amber-300 rounded-lg transition-all p-2 transition-all"
+          href="https://t.me/buddhammsubshare"
+          target="_blank"
+        >
+          <div class="flex items-center text-gray-600">
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
             >
-          </div>
-          <div class="pl-2 flex flex-col">
-            <a class="hover:underline text-zinc-600 text-lg" href="./ep1.html"
-              >Buddha Mmsub Episode 1</a
-            >
-            <a class="hover:underline text-zinc-500 text-base" href="./ep1.html"
-              >အပိုင်း ၁</a
-            >
-          </div>
-        </div>
-      </a>
-      <a href="./ep2.html">
-        <div class="flex p-1 transition-all hover:bg-gray-200 md:hover:pb-10">
-          <div class="relative">
-            <img
-              class="h-28 rounded-lg"
-              src="https://i.mycdn.me/getVideoPreview?id=7398306220779&idx=10&type=39&tkn=1cD0Y6jmDjbxyFZikfTUrfXQ03s&fn=vid_u"
-              alt=""
-            /><span
-              class="absolute bottom-0 right-0 text-white opacity-bg-gray m-2 rounded-lg p-1"
-              >43:20</span
-            >
-          </div>
-          <div class="pl-2 flex flex-col">
-            <a class="hover:underline text-zinc-600 text-lg" href="./ep2.html"
-              >Buddha Mmsub Episode 2</a
-            >
-            <a class="hover:underline text-zinc-500 text-base" href="./ep2.html"
-              >အပိုင်း ၂</a
-            >
-          </div>
-        </div>
-      </a>
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"
+              />
+            </svg>
+            <span>Download</span>
+          </div></a
+        >
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const videoThumbnail = document.getElementById("video-thumbnail");
+        setTimeout(() => {
+          while (videoThumbnail.firstChild) {
+            videoThumbnail.removeChild(videoThumbnail.firstChild);
+          }
+          const originalUrl = "https://vk.com/video885627115_456239018";
+          const convertedUrl = convertVkUrl(originalUrl);
+
+          videoThumbnail.innerHTML =
+            '<iframe  src="' +
+            convertedUrl +
+            '" width="100%"  height="240"  style="max-width: 100%; border: none;"  allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0"  allowfullscreen></iframe>';
+        }, 1000);
+      });
+      function convertVkUrl(originalUrl) {
+        const regex = /video(\d+)_(\d+)/;
+        const match = originalUrl.match(regex);
+        if (match) {
+          const ownerId = match[1];
+          const videoId = match[2];
+          const newUrl = `https://vk.com/video_ext.php?oid=${ownerId}&id=${videoId}&hd=2&autoplay=1`;
+          return newUrl;
+        } else {
+          console.error("Invalid VK URL format");
+          return null;
+        }
+      }
+    </script>
   </body>
 </html>
