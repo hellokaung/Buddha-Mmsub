@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buddha MmSub</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #fffde7;
+        color: #4e342e;
+        font-family: Arial, sans-serif;
+      }
+
+      .button {
+        background-color: #fdd835;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px #bdbdbd;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .button:hover {
+        background-color: #fbc02d;
+        box-shadow: 2px 2px 8px #9e9e9e;
+      }
+
+      .nav {
+        background-color: #ffe082;
+        z-index: 1000;
+      }
+
+      .nav-item {
+        color: #8d6e63;
+      }
+
+      .nav-item.active {
+        color: #4e342e;
+      }
+
+      .nav-item.active:hover {
+        color: #3e2723;
+      }
+
+      .nav-item.unactive {
+        color: #8d6e63;
+      }
+
+      .nav-item.unactive:hover {
+        color: #795548;
+      }
+
+      swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #f0cb25;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .opacity-bg-gray {
+        background-color: #2d2d2db0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- nav -->
+    <nav
+      class="nav fixed top-0 h-18 md:h-20 w-full py-2 md:px-5 flex items-center shadow-md md:justify-between"
+    >
+      <div class="flex items-center">
+        <img class="h-10 w-10" src="./images/nav_icon.png" alt="Buddha Mmsub" />
+        <h1>Buddha Mmsub</h1>
+      </div>
+      <div class="fixed bottom-0 w-full p-0 m-0 md:relative md:w-auto">
+        <ul class="flex gap-2 items-center">
+          <li class="w-1/2">
+            <a href="./">
+              <div
+                class="flex flex-col items-center bg-amber-200 hover:bg-amber-300 transition-all rounded-t-lg cursor-pointer md:bg-transparent md:hover:bg-transparent md: md:hover:font-bold md:hover:text-lg md:font-semibold"
+              >
+                <svg
+                  class="w-6 h-6 text-gray-800 md:hidden mt-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+
+                <span>Home</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="w-1/2">
+            <div
+              class="flex flex-col items-center hover:bg-amber-300 transition-all rounded-t-lg cursor-pointer md:bg-transparent md:hover:bg-transparent md: md:hover:font-bold"
+            >
+              <svg
+                class="w-6 h-6 text-gray-800 md:hidden mt-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z"
+                  clip-rule="evenodd"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+
+              <span>Credit</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- for slider -->
+    <div class="mt-20 md:mt-24 slide-container h-52 md:h-80 m-2 rounded-lg">
+      <swiper-container
+        class="mySwiper"
+        pagination="true"
+        pagination-clickable="true"
+        navigation="true"
+        space-between="30"
+        centered-slides="true"
+        autoplay-delay="5000"
+        autoplay-disable-on-interaction="false"
+      >
+        <swiper-slide class="rounded-lg"
+          ><img
+            class="rounded-lg"
+            src="https://qqcdnpictest.mxplay.com/pic/091924994f8f4ff15aed5be6017361cb/en/16x9/1600x900/test_pic1688731638299.jpg"
+            alt=""
+        /></swiper-slide>
+        <swiper-slide class="rounded-lg">Slide 2</swiper-slide>
+        <swiper-slide class="rounded-lg">Slide 3</swiper-slide>
+      </swiper-container>
+    </div>
+    <!-- for movies list -->
+    <div class="grid grid-cols-1 md:grid-cols-2 mb-20 md:mb-0">
+      <div class="">
+        <a href="./ep1.html">
+          <div class="flex p-1 transition-all hover:bg-gray-200 md:hover:py-3">
+            <div class="relative">
+              <img
+                class="h-28 rounded-lg"
+                src="./images/ep1_default.jpg"
+                alt=""
+              /><span
+                class="absolute bottom-0 right-0 text-white opacity-bg-gray m-2 rounded-lg p-1"
+                >46:17</span
+              >
+            </div>
+            <div class="pl-2 flex flex-col">
+              <a class="hover:underline text-zinc-600 text-lg" href="./ep1.html"
+                >Buddha Mmsub Episode 1</a
+              >
+              <a
+                class="hover:underline h-full text-zinc-500 text-base"
+                href="./ep1.html"
+                >အပိုင်း ၁</a
+              >
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  </body>
+</html>
